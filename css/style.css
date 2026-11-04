@@ -1,0 +1,52 @@
+/* CONFIGURACION GENERAL */
+
+⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CUERPO DE LA PAGINA */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f0;
+    color: #333333;
+}
+
+/* ENCABEZADO */
+
+header {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    text-align: center;
+}
+
+/* TITULO PRINCIPAL */
+
+header h1 {
+    color: #795548;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* MENU DE NAVEGACION */
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #c17b45;
+}

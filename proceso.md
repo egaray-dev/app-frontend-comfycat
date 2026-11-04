@@ -1,0 +1,1 @@
+1. Hacer un análisis comparado de otras empresas y sus páginas (land pages) para obtener estrucutras comunes de la competencia. En base a eso determinamos que la mejor estrucutra incluye una sección de portada, productos principales y beneficios para gatos y sus dueños.
