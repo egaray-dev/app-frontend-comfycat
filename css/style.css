@@ -1,6 +1,6 @@
 /* CONFIGURACION GENERAL */
 
-⁠{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,6 +30,24 @@ header h1 {
     margin-bottom: 15px;
 }
 
+.boton-principal {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #795548;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: #c17b45;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
 /* MENU DE NAVEGACION */
 
 nav ul {
@@ -38,15 +56,362 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin: 10px 15px;
+    margin: 10px 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #333333;
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #c17b45;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #c17b45;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 15px 100px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    display: block;
+}
+
+.logo::after {
+    display: none;
+}
+
+/* SECCIONES GENERALES */
+
+section {
+    padding: 20px 40px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* TITULOS DE LAS SECCIONES */
+
+section h2 {
+    color: #795548;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* PARRAFOS */
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* NOSOTROS: CARRUSEL A LA IZQUIERDA, TEXTO A LA DERECHA */
+
+#nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    text-align: left;
+}
+
+/* VENTANA DEL CARRUSEL: SOLO DEJA VER UNA IMAGEN */
+.carrusel {
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* PISTA: TODAS LAS IMAGENES EN FILA, SE DESPLAZA HACIA LA IZQUIERDA */
+.carrusel-pista {
+    display: flex;
+    height: 100%;
+    animation: deslizar 32s ease-in-out infinite;
+}
+
+.carrusel-pista img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PAUSA AL PASAR EL MOUSE */
+.carrusel:hover .carrusel-pista {
+    animation-play-state: paused;
+}
+
+/* CADA IMAGEN SE QUEDA QUIETA UN TIEMPO Y LUEGO SE DESLIZA */
+@keyframes deslizar {
+    0%, 10%      { transform: translateX(0); }
+    12.5%, 22.5% { transform: translateX(-100%); }
+    25%, 35%     { transform: translateX(-200%); }
+    37.5%, 47.5% { transform: translateX(-300%); }
+    50%, 60%     { transform: translateX(-400%); }
+    62.5%, 72.5% { transform: translateX(-500%); }
+    75%, 85%     { transform: translateX(-600%); }
+    87.5%, 97.5% { transform: translateX(-700%); }
+    100%         { transform: translateX(-800%); }
+}
+
+/* PRODUCTOS */
+
+#productos article {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px 1%;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* IMAGENES DE PRODUCTOS */
+
+#productos img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* BOTONES */
+button {
+    background-color: #795548;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+button:hover {
+    background-color: #c17b45;
+    transform: scale(1.05);
+}
+
+/* FORMULARIO */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: left;
+}
+
+input,
+select,
+textarea {
+    width: 95%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* TABLA DE PRODUCTOS */
+
+#productos table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#productos th {
+    background-color: #795548;
+    color: white;
+    padding: 15px;
+}
+
+#productos td {
+    padding: 12px;
+    border: 1px solid #dddddd;
+}
+
+#productos tr:hover {
+    background-color: #f2e6dc;
+}
+
+/* BENEFICIOS */
+
+#beneficios ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#beneficios li {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    background-color: #795548;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+/* DISEÑO RESPONSIVE PARA TABLETS */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+}
+
+/* DISEÑO RESPONSIVE PARA CELULARES */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav li {
+        display: block;
+        margin: 12px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    #productos article {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    #productos table {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 12px;
+    }
+
+    #productos th,
+    #productos td {
+        padding: 6px;
+        overflow-wrap: break-word;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    .boton-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    #nosotros {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* TRANSICIONES EN LAS TARJETAS */
+
+#productos article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* DESPLAZAMIENTO SUAVE ENTRE SECCIONES */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BOTON FLOTANTE DE WHATSAPP */
+.boton-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1001;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }

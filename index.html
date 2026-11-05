@@ -4,27 +4,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <meta name="Tienda virtual ComfyCat">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda virtual ComfyCat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <title>ComfyCat | Muebles para gatos</title>
 </head>
 
 <body>
-    <header>
-        <h1>ComfyCat - Circuitos de pared para gatos</h1>
-        <p>Espacios pensados para gatos felices </p>
-        <a href="#productos">Ver nuestros productos</a>
-
-        <nav>
-            <ul>
-                <li><a href="#nosotros">Inicio</a></li>
-                <li><a href="#portada">Nosotros</a></li>
-                <li><a href="#productos">Beneficios</a></li>
-                <li><a href="#beneficios">Productos</a></li>
-            </ul>
-        </nav>
-
-    </header>
+    <nav>
+        <a href="#" class="logo">
+            <img src="img/Logo-ConfyCat-horizontal.png" alt="ComfyCat - Ir al inicio">
+        </a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#formulario">Contacto</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section id="encabezado">
@@ -32,13 +31,32 @@
         </section>
 
         <section id="nosotros">
-            <h2>¿Quiénes somos?</h2>
+            <div class="carrusel">
+                <div class="carrusel-pista">
+                    <img src="img/carrusel/cadena-hex-portada.png" alt="Circuito de repisas hexagonales en la pared">
+                    <img src="img/carrusel/cadena-hex-2.png" alt="Gato descansando en una repisa hexagonal">
+                    <img src="img/carrusel/cadena-hex-3.png" alt="Cadena de hexágonos instalada en la pared">
+                    <img src="img/carrusel/repisas.png" alt="Repisas de madera para gatos">
+                    <img src="img/carrusel/mueble-sala.png" alt="Mueble para gatos integrado a la sala">
+                    <img src="img/carrusel/rascador-piso.png" alt="Rascador de piso para gatos">
+                    <img src="img/carrusel/rascador-piso-2.png" alt="Rascador de piso con plataforma">
+                    <img src="img/carrusel/rascador-piso-3.png" alt="Rascador de piso de varios niveles">
+                    <!-- Copia de la primera: permite que el giro vuelva al inicio sin salto -->
+                    <img src="img/carrusel/cadena-hex-portada.png" alt="" aria-hidden="true">
+                </div>
+            </div>
 
-            <p>
-                En ComfyCat ofrecemos muebles diseñados para
-                brindar comodidad, diversión y bienestar a los gatos.
-            </p>
+            <div class="nosotros-texto">
+                <h2>¿Quiénes somos?</h2>
+                
+                <p>
+                    En ComfyCat ofrecemos muebles diseñados para
+                    brindar comodidad, diversión y bienestar a los gatos.
+                </p>
+            </div>
+
         </section>
+
 
         <section id="portada">
 
@@ -68,7 +86,7 @@
                 alt="Diseños que complementan el hogar y ofrecen comodidad.">
             </article>
         
-            <table border="1">
+            <table>
 
             <thead>
                 <tr>
@@ -114,7 +132,7 @@
         </section>
 
         <section id="formulario">
-            <h2>Contactanos</h2>
+            <h2>Contáctanos</h2>
             <p>Habla con un especialista</p>
 
             <form>
@@ -137,10 +155,18 @@
     </main>
 
     <footer>
-        <p>©️ 2026 CONFYCAT. Todos los derechos reservados.</p>
+        <p>&copy; 2026 ComfyCat. Todos los derechos reservados.</p>
 
         <p>Muebles y espacios diseñados para gatos.</p>
     </footer>
+
+    <a href="https://wa.me/51915920230?text=Hola%2C%20ComfyCat%21%20Quisiera%20preguntarles%20por%20su%20precios%20y%20ofertas.%20"
+       class="boton-whatsapp"
+       target="_blank"
+       rel="noopener"
+       aria-label="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
 
