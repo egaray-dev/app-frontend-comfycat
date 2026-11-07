@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta a ComfyCat para encontrar el espacio ideal para tu gato.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacto | ComfyCat</title>
+    <script src="js/navegacion.js" defer></script>
+    <script src="js/contacto.js" defer></script>
+</head>
+
+<body>
+    <nav aria-label="Navegación principal">
+        <a href="index.html" class="logo">
+            <img src="img/Logo-ConfyCat-horizontal.png" alt="ComfyCat - Ir al inicio">
+        </a>
+        <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="menu-principal">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.html#productos">Categorías</a></li>
+            <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="formulario">
+            <h1>Contáctanos</h1>
+            <p>Cuéntanos qué necesita tu gato y te ayudaremos a encontrar su espacio ideal.</p>
+
+            <form id="form-contacto">
+                <p class="form-ayuda" id="form-ayuda">Completa los campos para preparar tu consulta. Tú decides cuándo enviarla por WhatsApp.</p>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="100" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" maxlength="200" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" maxlength="2000" placeholder="¿Qué espacio tienes y qué le gusta hacer a tu gato?" required></textarea>
+
+                <button class="boton" type="submit">Preparar consulta</button>
+                <p id="estado-consulta" class="form-estado" role="status"></p>
+                <a id="continuar-whatsapp" class="form-continuar" target="_blank" rel="noopener noreferrer" hidden>Continuar en WhatsApp ↗</a>
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="pie-contenido">
+            <div>
+                <a class="pie-marca" href="index.html">ComfyCat</a>
+                <p>Un hogar para ti. Un mundo para tu gato.</p>
+            </div>
+            <div>
+                <h2>Explora</h2>
+                <ul>
+                    <li><a href="index.html#productos">Categorías</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Conversemos</h2>
+                <p>Encuentra el espacio ideal para tu gato.</p>
+                <a href="https://wa.me/51915920230" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp ↗</a>
+            </div>
+        </div>
+        <p class="pie-copyright">&copy; 2026 ComfyCat. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/51915920230?text=Hola%2C%20ComfyCat%21%20Quisiera%20preguntarles%20por%20su%20precios%20y%20ofertas.%20"
+       class="boton-whatsapp"
+       target="_blank"
+       rel="noopener"
+       aria-label="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+
+</html>
