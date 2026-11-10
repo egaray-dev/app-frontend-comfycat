@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -9,155 +8,130 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>ComfyCat | Muebles para gatos</title>
+    <script src="js/navegacion.js" defer></script>
 </head>
 
 <body>
-    <nav>
+    <nav aria-label="Navegación principal">
         <a href="#" class="logo">
             <img src="img/Logo-ConfyCat-horizontal.png" alt="ComfyCat - Ir al inicio">
         </a>
-        <ul>
+        <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="menu-principal">
             <li><a href="#">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#formulario">Contacto</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#productos">Categorías</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="encabezado">
-            
-        </section>
-
-        <section id="nosotros">
-            <div class="carrusel">
-                <div class="carrusel-pista">
-                    <img src="img/carrusel/cadena-hex-portada.png" alt="Circuito de repisas hexagonales en la pared">
-                    <img src="img/carrusel/cadena-hex-2.png" alt="Gato descansando en una repisa hexagonal">
-                    <img src="img/carrusel/cadena-hex-3.png" alt="Cadena de hexágonos instalada en la pared">
-                    <img src="img/carrusel/repisas.png" alt="Repisas de madera para gatos">
-                    <img src="img/carrusel/mueble-sala.png" alt="Mueble para gatos integrado a la sala">
-                    <img src="img/carrusel/rascador-piso.png" alt="Rascador de piso para gatos">
-                    <img src="img/carrusel/rascador-piso-2.png" alt="Rascador de piso con plataforma">
-                    <img src="img/carrusel/rascador-piso-3.png" alt="Rascador de piso de varios niveles">
-                    <!-- Copia de la primera: permite que el giro vuelva al inicio sin salto -->
-                    <img src="img/carrusel/cadena-hex-portada.png" alt="" aria-hidden="true">
+        <section id="encabezado" aria-labelledby="encabezado-titulo">
+            <div class="encabezado-contenido">
+                <p class="encabezado-etiqueta">Comodidad en casa. Felicidad felina.</p>
+                <h1 id="encabezado-titulo">Su rincón favorito.<br><span>Tu hogar, más gatuno.</span></h1>
+                <p class="encabezado-descripcion">Repisas para explorar, rascadores para jugar y espacios para descansar.
+                    Dale a tu gato un mundo que pueda hacer suyo.</p>
+                <div class="encabezado-acciones">
+                    <a href="#productos" class="boton encabezado-boton">Explorar productos</a>
+                    <a href="contacto.html" class="boton encabezado-boton encabezado-boton-secundario">Encuentra su espacio ideal</a>
                 </div>
             </div>
+        </section>
 
-            <div class="nosotros-texto">
-                <h2>¿Quiénes somos?</h2>
-                
-                <p>
-                    En ComfyCat ofrecemos muebles diseñados para
-                    brindar comodidad, diversión y bienestar a los gatos.
-                </p>
+
+        <section id="productos" aria-labelledby="productos-titulo">
+            <h2 id="productos-titulo">Nuestros productos</h2>
+            <div class="product-grid" tabindex="0" role="region" aria-label="Categorías de productos" aria-describedby="catalogo-ayuda">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdEl7u8ZAOpMCgyBYBTuLoS6nHFziUnH5FTew5tvUH9Q&s=10" alt="Casa para gato">
+                    </div>
+                    <div id="test" class="product-info">
+                        <h3>Casa para gato</h3>
+                        <p class="price">Desde S/ 99.00</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://thumbs.dreamstime.com/b/diversas-marcas-de-comida-para-gatos-mojada-que-se-pueden-comprar-en-el-mercado-europeo-122794648.jpg?w=768" alt="Comida para gato">
+                    </div>
+                    <div class="product-info">
+                        <h3>Comida para gato</h3>
+                        <p class="price">Desde S/ 19.00</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Uu4pdPQPUINa426uuGfly_6682nI1pj6D8m5DNCKxw&s=10" alt="Arenero para gatos">
+                    </div>
+                    <div class="product-info">
+                        <h3>Arenero para gatos</h3>
+                        <p class="price">Desde S/ 29.00</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPPYsqSGRbt6F3zdcU4dACnXaBKB8YCNRu9FSe9B7ng&s" alt="Juguetes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Juguetes</h3>
+                        <p class="price">Desde S/ 15.00</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbR7GDTCKcQAoqmkrP5RwwOlLO-Li_hR9fyZeg45UrMQ&s=10" alt="Ropa">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ropa</h3>
+                        <p class="price">Desde S/ 85.00</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUdWxH1Gjdx39f-0CAvl36SricPjkmDDNw2QdWkPYcbg&s=10" alt="Cuidado de higiene">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cuidado de higiene</h3>
+                        <p class="price">Desde S/ 85.00</p>
+                    </div>
+                </article>
             </div>
-
-        </section>
-
-
-        <section id="portada">
-
-        </section>
-
-        <section id="productos">
-            <h2>Nuestros productos</h2>
-
-            <article>
-                <h3>Rascadores para gatos</h3>
-                <p>Espacios para que los gatos puedan afilar sus uñas.</p>
-                <img src="img/rascador-piso-2.png" 
-                alt="Rascadores para gatos">
-            </article>
-
-            <article>
-                <h3>Árboles para gatos</h3>
-                <p>Espacios para trepar, jugar y descansar.</p>
-                <img src="img/rascador-piso.png"
-                alt="Espacios para trepar, jugar y descansar">
-            </article>
-
-            <article>
-                <h3>Muebles para gatos</h3>
-                <p>Diseños que complementan el hogar y ofrecen comodidad.</p>
-                <img src="img/mueble-sala.png"
-                alt="Diseños que complementan el hogar y ofrecen comodidad.">
-            </article>
-        
-            <table>
-
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Rascador</td>
-                    <td>Rascador para gatos</td>
-                    <td>S/ 80</td>
-                </tr>
-
-                <tr>
-                    <td>Árbol para gatos</td>
-                    <td>Mueble para jugar y descansar</td>
-                    <td>S/ 180</td>
-                </tr>
-
-                <tr>
-                    <td>Mueble para gatos</td>
-                    <td>Espacio de descanso</td>
-                    <td>S/ 250</td>
-                </tr>
-            </tbody>
-
-            </table>
-
-        </section>
-
-        <section id="beneficios">
-            <h2>¿Por qué elegir ComfyCat?</h2>
-
-            <ul>
-                <li>Espacios para jugar y explorar.</li>
-                <li>Lugares cómodos para descansar.</li>
-                <li>Diseños pensados para los gatos.</li>
-                <li>Ambientes que estimulan su actividad.</li>
-            </ul>
-        </section>
-
-        <section id="formulario">
-            <h2>Contáctanos</h2>
-            <p>Habla con un especialista</p>
-
-            <form>
-
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-
-                <button type="submit">Enviar mensaje</button>
-
-            </form>
-
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 ComfyCat. Todos los derechos reservados.</p>
-
-        <p>Muebles y espacios diseñados para gatos.</p>
+    <footer class="pie-pagina">
+        <div class="pie-contenido">
+            <div>
+                <a class="pie-marca" href="index.html">ComfyCat</a>
+                <p>Un hogar para ti. Un mundo para tu gato.</p>
+            </div>
+            <div>
+                <h2>Explora</h2>
+                <ul>
+                    <li><a href="index.html#productos">Categorías</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Conversemos</h2>
+                <p>Encuentra el espacio ideal para tu gato.</p>
+                <a href="https://wa.me/51915920230" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp ↗</a>
+            </div>
+        </div>
+        <p class="pie-copyright">&copy; 2026 ComfyCat. Todos los derechos reservados.</p>
     </footer>
 
     <a href="https://wa.me/51915920230?text=Hola%2C%20ComfyCat%21%20Quisiera%20preguntarles%20por%20su%20precios%20y%20ofertas.%20"
