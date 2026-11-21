@@ -7,28 +7,14 @@
     <meta name="description" content="Tienda virtual ComfyCat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aminaciones.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>ComfyCat | Muebles para gatos</title>
-    <script src="js/navegacion.js" defer></script>
+    <script src="js/componentes.js" defer></script>
 </head>
 
-<body>
-    <nav aria-label="Navegación principal">
-        <a href="#" class="logo">
-            <img src="img/Logo-ConfyCat-horizontal.png" alt="ComfyCat - Ir al inicio">
-        </a>
-        <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul id="menu-principal">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="#productos">Categorías</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
+<body data-base="./">
+    <div id="componente-navbar"></div>
     <main>
         <section id="encabezado" aria-labelledby="encabezado-titulo">
             <div class="encabezado-contenido">
@@ -38,7 +24,7 @@
                     Dale a tu gato un mundo que pueda hacer suyo.</p>
                 <div class="encabezado-acciones">
                     <a href="#productos" class="boton encabezado-boton">Explorar productos</a>
-                    <a href="contacto.html" class="boton encabezado-boton encabezado-boton-secundario">Encuentra su espacio ideal</a>
+                    <a href="paginas/contacto.html" class="boton encabezado-boton encabezado-boton-secundario">Encuentra su espacio ideal</a>
                 </div>
             </div>
         </section>
@@ -108,39 +94,9 @@
                 </article>
             </div>
         </section>
-
     </main>
-
-    <footer class="pie-pagina">
-        <div class="pie-contenido">
-            <div>
-                <a class="pie-marca" href="index.html">ComfyCat</a>
-                <p>Un hogar para ti. Un mundo para tu gato.</p>
-            </div>
-            <div>
-                <h2>Explora</h2>
-                <ul>
-                    <li><a href="index.html#productos">Categorías</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div>
-                <h2>Conversemos</h2>
-                <p>Encuentra el espacio ideal para tu gato.</p>
-                <a href="https://wa.me/51915920230" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp ↗</a>
-            </div>
-        </div>
-        <p class="pie-copyright">&copy; 2026 ComfyCat. Todos los derechos reservados.</p>
-    </footer>
-
-    <a href="https://wa.me/51915920230?text=Hola%2C%20ComfyCat%21%20Quisiera%20preguntarles%20por%20su%20precios%20y%20ofertas.%20"
-       class="boton-whatsapp"
-       target="_blank"
-       rel="noopener"
-       aria-label="Escríbenos por WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <div id="componente-footer"></div>
+    <div id="componente-boton"></div>
 
 </body>
 
