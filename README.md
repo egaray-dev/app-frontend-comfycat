@@ -37,15 +37,4 @@ js/
 | `if` / `else if` / `switch` | `switch` por página en `main.js` y por acción (+, −, eliminar) en `carrito.js` (`aplicarAccion`). `if`/`else if` en `agregar` y `cambiarCantidad` de `carrito.js` y en `validarConsulta` de `contacto.js`. |
 | `addEventListener` | Eventos `click`, `input`, `change`, `submit` y `keydown`, y `change` de `matchMedia`, en todos los módulos. |
 | Código modular | Un módulo por responsabilidad, sin variables globales. Los datos (`datos/`), la configuración (`config.js`) y las utilidades (`utils/`) están separados. |
-| Resultados en el navegador | Carpeta [`capturas/`](capturas/). |
-
-## Capturas
-
-| Archivo | Muestra |
-|---|---|
-| `01-inicio.png` | Portada con el enlace "Inicio" marcado como página actual |
-| `02-catalogo.png` | Tarjetas generadas desde `datos/productos.js` |
-| `03-carrito.png` | Carrito con productos, contador de unidades y total |
-| `04-contacto-error.png` | Formulario con un campo vacío |
-| `05-contacto-listo.png` | Consulta validada y lista para WhatsApp |
-| `06-menu-movil.png` | Menú hamburguesa abierto en vista móvil |
+| Resultados en el navegador | Capturas de la interfaz incluidas en el informe del curso. |
