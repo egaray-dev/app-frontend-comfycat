@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tienda virtual ComfyCat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/animaciones.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animaciones.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="img/patita-cursor.png">
     <title>ComfyCat | Muebles para gatos</title>
-    <script src="../js/componentes.js" defer></script>
+    <script type="module" src="js/main.js"></script>
 </head>
 
-<body data-base="./">
+<body data-base="./" data-pagina="inicio">
     <div id="componente-navbar"></div>
     <main>
         <section id="encabezado" aria-labelledby="encabezado-titulo">
@@ -24,7 +25,7 @@
                     Dale a tu gato un mundo que pueda hacer suyo.</p>
                 <div class="encabezado-acciones">
                     <a href="#productos" class="boton encabezado-boton">Explorar productos</a>
-                    <a href="../paginas/contacto.html" class="boton encabezado-boton encabezado-boton-secundario">Encuentra su espacio ideal</a>
+                    <a href="paginas/contacto.html" class="boton encabezado-boton encabezado-boton-secundario">Encuentra su espacio ideal</a>
                 </div>
             </div>
         </section>
@@ -32,68 +33,12 @@
 
         <section id="productos" aria-labelledby="productos-titulo">
             <h2 id="productos-titulo">Nuestros productos</h2>
-            <div class="product-grid" tabindex="0" role="region" aria-label="Categorías de productos" aria-describedby="catalogo-ayuda">
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdEl7u8ZAOpMCgyBYBTuLoS6nHFziUnH5FTew5tvUH9Q&s=10" alt="Casa para gato">
-                    </div>
-                    <div id="test" class="product-info">
-                        <h3>Casa para gato</h3>
-                        <p class="price">Desde S/ 99.00</p>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://thumbs.dreamstime.com/b/diversas-marcas-de-comida-para-gatos-mojada-que-se-pueden-comprar-en-el-mercado-europeo-122794648.jpg?w=768" alt="Comida para gato">
-                    </div>
-                    <div class="product-info">
-                        <h3>Comida para gato</h3>
-                        <p class="price">Desde S/ 19.00</p>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Uu4pdPQPUINa426uuGfly_6682nI1pj6D8m5DNCKxw&s=10" alt="Arenero para gatos">
-                    </div>
-                    <div class="product-info">
-                        <h3>Arenero para gatos</h3>
-                        <p class="price">Desde S/ 29.00</p>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPPYsqSGRbt6F3zdcU4dACnXaBKB8YCNRu9FSe9B7ng&s" alt="Juguetes">
-                    </div>
-                    <div class="product-info">
-                        <h3>Juguetes</h3>
-                        <p class="price">Desde S/ 15.00</p>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbR7GDTCKcQAoqmkrP5RwwOlLO-Li_hR9fyZeg45UrMQ&s=10" alt="Ropa">
-                    </div>
-                    <div class="product-info">
-                        <h3>Ropa</h3>
-                        <p class="price">Desde S/ 85.00</p>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUdWxH1Gjdx39f-0CAvl36SricPjkmDDNw2QdWkPYcbg&s=10" alt="Cuidado de higiene">
-                    </div>
-                    <div class="product-info">
-                        <h3>Cuidado de higiene</h3>
-                        <p class="price">Desde S/ 85.00</p>
-                    </div>
-                </article>
+            <p id="catalogo-ayuda" class="catalogo-ayuda">Desliza para ver todas las categorías.</p>
+            <div id="lista-productos" class="product-grid" tabindex="0" role="region" aria-label="Categorías de productos" aria-describedby="catalogo-ayuda">
             </div>
         </section>
+
+
     </main>
     <div id="componente-footer"></div>
     <div id="componente-boton"></div>

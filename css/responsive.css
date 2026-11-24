@@ -12,8 +12,22 @@
         padding: 16px 20px;
     }
     nav .logo {
+        flex: 1;
         min-width: 0;
-        max-width: calc(100% - 60px);
+        max-width: none;
+    }
+    #navbar-carrito, nav > #carrito { order: 1; }
+    nav .menu-toggle { order: 2; }
+    nav ul { order: 3; margin-left: 0; }
+    #carrito .cart-toggle {
+        padding: 10px 12px;
+        gap: 4px;
+    }
+    #carrito .cart-panel {
+        position: fixed;
+        top: 80px;
+        right: 16px;
+        max-height: calc(100dvh - 108px);
     }
     nav .logo img {
         max-width: 100%;

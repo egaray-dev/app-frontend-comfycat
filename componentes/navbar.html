@@ -9,12 +9,26 @@
             <span></span>
         </button>
         <ul id="menu-principal">
-            <li class="nav-item"><a class="nav-link" data-page="inicio" href="{{BASE}}index.html">Inicio</a></li>
-<!--            <li><a href="{{BASE}}index.html">Inicio</a></li>
--->
-            <li><a href="../paginas/nosotros.html">Nosotros</a></li>
-            <li><a href="../paginas/index.html#productos">Categorías</a></li>
-            <li><a href="../paginas/contacto.html" aria-current="page">Contacto</a></li>
+            <li><a data-pagina="inicio" href="{{BASE}}index.html">Inicio</a></li>
+            <li><a data-pagina="nosotros" href="{{BASE}}paginas/nosotros.html">Nosotros</a></li>
+            <li><a href="{{BASE}}index.html#productos">Categorías</a></li>
+            <li><a data-pagina="contacto" href="{{BASE}}paginas/contacto.html">Contacto</a></li>
         </ul>
+        <section id="carrito" aria-labelledby="carrito-titulo">
+            <button type="button" id="cart-toggle" class="boton cart-toggle" aria-expanded="false" aria-controls="cart-panel" aria-label="Carrito, 0 unidades">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <span id="cart-count" hidden>0</span>
+            </button>
+            <div id="cart-panel" class="cart-panel" hidden>
+                <h2 id="carrito-titulo">Tu carrito</h2>
+                <div id="cart-items" aria-live="polite"></div>
+                <div class="cart-summary">
+                    <p>Total: <strong id="cart-total">S/ 0.00</strong></p>
+                    <button type="button" id="btn-whatsapp" class="boton">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Enviar pedido por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
     </nav>
 </header>
